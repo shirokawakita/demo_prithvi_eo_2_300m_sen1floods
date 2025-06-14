@@ -32,16 +32,50 @@ pip install terratorch  # Prithvi-EO-2.0モデル用
 
 ### 2. モデルとデータのダウンロード
 
+#### 方法1: 直接ダウンロード（推奨）
+
+[Hugging Face Model Repository](https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-2.0-300M-TL-Sen1Floods11/tree/main)から必要なファイルをダウンロードしてください：
+
+**必須ファイル:**
+- `Prithvi-EO-V2-300M-TL-Sen1Floods11.pt` (1.28 GB) - 学習済みモデル
+- `config.yaml` (4.33 kB) - モデル設定ファイル
+- `inference.py` (10.3 kB) - 推論スクリプト（参考用）
+
+**ダウンロード手順:**
+1. [モデルページ](https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-2.0-300M-TL-Sen1Floods11/tree/main)にアクセス
+2. 各ファイルをクリックして「Download」ボタンでダウンロード
+3. プロジェクトフォルダに配置
+
+#### 方法2: wgetコマンド
+
 ```bash
 # モデルファイルのダウンロード
 wget https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-2.0-300M-TL-Sen1Floods11/resolve/main/Prithvi-EO-V2-300M-TL-Sen1Floods11.pt
 
 # 設定ファイルのダウンロード
 wget https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-2.0-300M-TL-Sen1Floods11/resolve/main/config.yaml
+```
 
-# サンプルデータのダウンロード（オプション）
+#### 方法3: Hugging Face Hub（オプション）
+
+```bash
+# Hugging Face Hubのインストール
+pip install huggingface_hub
+
+# Pythonでダウンロード
+python -c "
+from huggingface_hub import hf_hub_download
+hf_hub_download(repo_id='ibm-nasa-geospatial/Prithvi-EO-2.0-300M-TL-Sen1Floods11', filename='Prithvi-EO-V2-300M-TL-Sen1Floods11.pt')
+hf_hub_download(repo_id='ibm-nasa-geospatial/Prithvi-EO-2.0-300M-TL-Sen1Floods11', filename='config.yaml')
+"
+```
+
+#### サンプルデータ（オプション）
+
+```bash
+# サンプルデータフォルダの作成
 mkdir data
-# サンプル画像をdataフォルダに配置
+# サンプル画像をdataフォルダに配置（別途入手）
 ```
 
 ### 3. ファイル構成
