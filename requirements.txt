@@ -1,0 +1,25 @@
+# Core deep learning framework
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Streamlit web framework
+streamlit>=1.28.0
+
+# Geospatial and image processing
+rasterio>=1.3.0
+pillow>=10.0.0
+scikit-image>=0.20.0
+numpy>=1.24.0
+
+# Configuration and data handling
+pyyaml>=6.0
+einops>=0.7.0
+
+# Terratorch framework for Prithvi models
+terratorch
+
+# Additional dependencies that may be required
+scipy>=1.10.0
+matplotlib>=3.7.0
+tifffile>=2022.8.12 
