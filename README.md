@@ -103,7 +103,7 @@ streamlit run main.py
 
 ブラウザで `http://localhost:8501` にアクセスしてください。
 
-![Streamlit Application Demo](streamlit_demo.png)
+![Streamlit Application Demo](./streamlit_demo.png)
 
 **アプリケーションの機能:**
 - 📁 ドラッグ&ドロップでSentinel-2 TIFFファイルをアップロード
